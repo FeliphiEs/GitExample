@@ -18,5 +18,7 @@ public class Controlador {
             new Estudiante(3L, "Luis Torres", "Ingeniería Industrial")
 );
 }
-
+    @PostMapping("/estudiantes")
+    public Estudiante crearEstudiante(@RequestBody Estudiante nuevoEstudiante)
+    { return nuevoEstudiante; }
 }
