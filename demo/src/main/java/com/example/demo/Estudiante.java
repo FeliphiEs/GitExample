@@ -1,4 +1,8 @@
 package com.example.demo;
+
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+
 public class Estudiante {
     private Long id;
     private String nombre;
@@ -17,4 +21,8 @@ public String getNombre() { return nombre; }
 public void setNombre(String nombre) { this.nombre = nombre; }
 public String getCarrera() { return carrera; }
 public void setCarrera(String carrera) { this.carrera = carrera; }
+
+    @PostMapping("/estudiantes")
+    public Estudiante crearEstudiante(@RequestBody Estudiante nuevoEstudiante)
+    { return nuevoEstudiante; }
 }

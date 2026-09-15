@@ -19,7 +19,4 @@ public class Controlador {
 );
 }
 
-    @PostMapping("/estudiantes")
-    public Estudiante crearEstudiante(@RequestBody Estudiante nuevoEstudiante)
-    { return nuevoEstudiante; }
 }
